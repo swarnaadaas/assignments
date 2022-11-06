@@ -20,11 +20,7 @@ function getData(){
 function showData(json){
     console.log(json);
     response = json;
-
-    // for (let i = 0; i < json.data.length; i++) {
-    //     const user = json.data[i];
-    //     console.log(user.email);
-    // }
+    
     tbody.innerHTML = "";
     json.data.forEach(user =>{
         console.log(user.email);
@@ -61,7 +57,6 @@ function showPagination() {
             <a class="page-link" href="#" onclick="return navPrevNext('n')">Next</a>
         </li>
         `;
-
 }
 
 function navPrevNext(option){
@@ -74,6 +69,5 @@ function navPrevNext(option){
     else{
         selectedPage = option;
     }
-    
     getData();
 }
